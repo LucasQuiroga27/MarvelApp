@@ -15,6 +15,10 @@
 		0D0187452C0422430042BA46 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 0D0187442C0422430042BA46 /* Base */; };
 		0D0187502C04282E0042BA46 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01874F2C04282E0042BA46 /* APIClient.swift */; };
 		0D0187522C0428980042BA46 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 0D0187512C0428980042BA46 /* README */; };
+		0D0187542C0580360042BA46 /* MarvelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187532C0580360042BA46 /* MarvelResponse.swift */; };
+		0D0187562C05804B0042BA46 /* MarvelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187552C05804B0042BA46 /* MarvelData.swift */; };
+		0D0187582C05805D0042BA46 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187572C05805D0042BA46 /* CharacterModel.swift */; };
+		0D01875A2C0580690042BA46 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187592C0580690042BA46 /* ImageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		0D0187462C0422430042BA46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D01874F2C04282E0042BA46 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		0D0187512C0428980042BA46 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		0D0187532C0580360042BA46 /* MarvelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelResponse.swift; sourceTree = "<group>"; };
+		0D0187552C05804B0042BA46 /* MarvelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelData.swift; sourceTree = "<group>"; };
+		0D0187572C05805D0042BA46 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		0D0187592C0580690042BA46 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				0D01874F2C04282E0042BA46 /* APIClient.swift */,
+				0D0187532C0580360042BA46 /* MarvelResponse.swift */,
+				0D0187552C05804B0042BA46 /* MarvelData.swift */,
+				0D0187572C05805D0042BA46 /* CharacterModel.swift */,
+				0D0187592C0580690042BA46 /* ImageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,7 +184,11 @@
 				0D01873D2C0422420042BA46 /* ViewController.swift in Sources */,
 				0D0187392C0422420042BA46 /* AppDelegate.swift in Sources */,
 				0D01873B2C0422420042BA46 /* SceneDelegate.swift in Sources */,
+				0D0187542C0580360042BA46 /* MarvelResponse.swift in Sources */,
+				0D0187562C05804B0042BA46 /* MarvelData.swift in Sources */,
+				0D0187582C05805D0042BA46 /* CharacterModel.swift in Sources */,
 				0D0187502C04282E0042BA46 /* APIClient.swift in Sources */,
+				0D01875A2C0580690042BA46 /* ImageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
