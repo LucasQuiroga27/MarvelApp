@@ -1,0 +1,26 @@
+#  USES CASES
+## Mostrar un listado de Personajes de Marvel
+
+como usuario, quiero poder consultar los personajes de marvel en un listado ordenados por nombre y con un buscador
+
+GIVEN Tengo la app iniciada
+WHEN accedo a la vista principal
+THEN veo un listado de los personajes de marvel
+AND informacion básica de cada personaje (nombre, imagen y descripción)
+
+-- ENTITIES
+        
+    MarvelResponse
+        MarvelData
+        
+    MarvelData
+        CharacterModel
+        
+    CharacterModel
+        id
+        name
+        description
+        image
+    
+-- USES CASES
+     Get characters marvel list
