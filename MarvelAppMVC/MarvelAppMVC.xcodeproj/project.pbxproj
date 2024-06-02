@@ -19,6 +19,7 @@
 		0D0187562C05804B0042BA46 /* MarvelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187552C05804B0042BA46 /* MarvelData.swift */; };
 		0D0187582C05805D0042BA46 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187572C05805D0042BA46 /* CharacterModel.swift */; };
 		0D01875A2C0580690042BA46 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187592C0580690042BA46 /* ImageModel.swift */; };
+		0D01875C2C0D36FF0042BA46 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01875B2C0D36FF0042BA46 /* CharacterListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0D0187552C05804B0042BA46 /* MarvelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelData.swift; sourceTree = "<group>"; };
 		0D0187572C05805D0042BA46 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		0D0187592C0580690042BA46 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		0D01875B2C0D36FF0042BA46 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,6 @@
 				0D01874E2C0427ED0042BA46 /* Controller */,
 				0D01873A2C0422420042BA46 /* SceneDelegate.swift */,
 				0D0187382C0422420042BA46 /* AppDelegate.swift */,
-				0D01873E2C0422420042BA46 /* Main.storyboard */,
 				0D0187412C0422430042BA46 /* Assets.xcassets */,
 				0D0187432C0422430042BA46 /* LaunchScreen.storyboard */,
 				0D0187462C0422430042BA46 /* Info.plist */,
@@ -97,6 +98,8 @@
 		0D01874D2C0427E30042BA46 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0D01873E2C0422420042BA46 /* Main.storyboard */,
+				0D01875B2C0D36FF0042BA46 /* CharacterListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				0D01873D2C0422420042BA46 /* ViewController.swift in Sources */,
 				0D0187392C0422420042BA46 /* AppDelegate.swift in Sources */,
 				0D01873B2C0422420042BA46 /* SceneDelegate.swift in Sources */,
+				0D01875C2C0D36FF0042BA46 /* CharacterListView.swift in Sources */,
 				0D0187542C0580360042BA46 /* MarvelResponse.swift in Sources */,
 				0D0187562C05804B0042BA46 /* MarvelData.swift in Sources */,
 				0D0187582C05805D0042BA46 /* CharacterModel.swift in Sources */,
