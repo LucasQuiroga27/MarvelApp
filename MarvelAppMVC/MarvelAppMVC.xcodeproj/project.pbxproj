@@ -20,6 +20,7 @@
 		0D0187582C05805D0042BA46 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187572C05805D0042BA46 /* CharacterModel.swift */; };
 		0D01875A2C0580690042BA46 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187592C0580690042BA46 /* ImageModel.swift */; };
 		0D01875C2C0D36FF0042BA46 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01875B2C0D36FF0042BA46 /* CharacterListView.swift */; };
+		0D01875E2C0D3CF50042BA46 /* CharacterListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01875D2C0D3CF50042BA46 /* CharacterListCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		0D0187572C05805D0042BA46 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		0D0187592C0580690042BA46 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		0D01875B2C0D36FF0042BA46 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		0D01875D2C0D3CF50042BA46 /* CharacterListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				0D01873E2C0422420042BA46 /* Main.storyboard */,
 				0D01875B2C0D36FF0042BA46 /* CharacterListView.swift */,
+				0D01875D2C0D3CF50042BA46 /* CharacterListCellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D01875E2C0D3CF50042BA46 /* CharacterListCellView.swift in Sources */,
 				0D01873D2C0422420042BA46 /* ViewController.swift in Sources */,
 				0D0187392C0422420042BA46 /* AppDelegate.swift in Sources */,
 				0D01873B2C0422420042BA46 /* SceneDelegate.swift in Sources */,

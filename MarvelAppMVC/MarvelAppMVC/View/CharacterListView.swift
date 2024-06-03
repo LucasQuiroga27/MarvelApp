@@ -13,6 +13,7 @@ class CharacterListView: UIView {
     let charactersTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(CharacterListCellView.self, forCellReuseIdentifier: "CharacterListCellView")
         return tableView
     }()
     
