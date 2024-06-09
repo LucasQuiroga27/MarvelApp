@@ -24,7 +24,7 @@ class CharacterDetailView: UIView {
         if let customFont = UIFont(name: "Roboto-Bold", size: 22) {
             label.font = customFont
         } else {
-            label.font = UIFont.boldSystemFont(ofSize: 22)
+            label.font = UIFont.boldSystemFont(ofSize: 24)
         }
         return label
     }()
@@ -32,8 +32,8 @@ class CharacterDetailView: UIView {
     let descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Descripción:"
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.text = "Description:"
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         return label
     }()
     
@@ -41,7 +41,7 @@ class CharacterDetailView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.italicSystemFont(ofSize: 16)
+        label.font = UIFont.italicSystemFont(ofSize: 18)
         label.textColor = UIColor.systemGray
         return label
     }()

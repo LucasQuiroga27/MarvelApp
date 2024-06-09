@@ -29,6 +29,8 @@ class CharacterListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
+        self.setupSearchController()
         
         tableViewDelegate?.touchedCell = { [weak self]  index in
             
@@ -51,7 +53,37 @@ class CharacterListViewController: UIViewController {
                     }
         }
     }
+    
+    func configureNavigationBar(){
+        
+        self.navigationItem.title = "Marvel App"
+        
+        let attributes = [
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22)
+        ]
+        
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
+        
+    }
+    
+    private func setupSearchController(){
+        mainView.searchController.searchResultsUpdater = self
+        mainView.searchController.obscuresBackgroundDuringPresentation = false
+        mainView.searchController.hidesNavigationBarDuringPresentation = false
+        mainView.searchController.searchBar.placeholder = "Search Characters"
+        
+        self.navigationItem.searchController = mainView.searchController
+        self.definesPresentationContext = false
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+    }
 
+}
+
+extension CharacterListViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController){
+        print("Debug print", searchController.searchBar.text!)
+    }
 }
 
 

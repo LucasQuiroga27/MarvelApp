@@ -10,6 +10,8 @@ import UIKit
 
 class CharacterListView: UIView {
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     let charactersTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
