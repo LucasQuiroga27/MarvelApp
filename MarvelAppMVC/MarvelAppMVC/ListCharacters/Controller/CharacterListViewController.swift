@@ -15,6 +15,8 @@ class CharacterListViewController: UIViewController {
     private var tableViewDataSource: CharacterListTableViewDataSource?
     private var tableViewDelegate: CharacterListTableViewDelegate?
     
+    var characterDetailPushCoordinator: CharacterDetailPushCoordinator?
+    
     override func loadView() {
         view = CharacterListView()
         tableViewDelegate = CharacterListTableViewDelegate()
@@ -27,6 +29,18 @@ class CharacterListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableViewDelegate?.touchedCell = { [weak self]  index in
+            
+            guard let dataSource = self?.tableViewDataSource else {
+                return
+            }
+            
+            let characterModel = dataSource.characters[index]
+            self?.characterDetailPushCoordinator = CharacterDetailPushCoordinator(navigationController: self?.navigationController, characterModel: characterModel)
+            self?.characterDetailPushCoordinator?.start()
+            
+        }
         
         Task {
             if let marvelResponse = await apiClient.getCharacters(character: nil),

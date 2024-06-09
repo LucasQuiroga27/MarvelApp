@@ -26,6 +26,10 @@
 		0D0187652C153E420042BA46 /* CharacterListTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187642C153E420042BA46 /* CharacterListTableViewDelegate.swift */; };
 		0D0187672C163BE90042BA46 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D0187662C163BE90042BA46 /* Roboto-Bold.ttf */; };
 		0D01876E2C1644A90042BA46 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01876D2C1644A90042BA46 /* CharacterDetailView.swift */; };
+		0D0187702C1647460042BA46 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01876F2C1647460042BA46 /* CharacterDetailViewController.swift */; };
+		0D0187732C165C2B0042BA46 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187722C165C2B0042BA46 /* Coordinator.swift */; };
+		0D0187752C165CB20042BA46 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187742C165CB20042BA46 /* MainCoordinator.swift */; };
+		0D0187772C165E7E0042BA46 /* CharacterDetailPushCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187762C165E7E0042BA46 /* CharacterDetailPushCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		0D0187642C153E420042BA46 /* CharacterListTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListTableViewDelegate.swift; sourceTree = "<group>"; };
 		0D0187662C163BE90042BA46 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../Downloads/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		0D01876D2C1644A90042BA46 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		0D01876F2C1647460042BA46 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		0D0187722C165C2B0042BA46 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0D0187742C165CB20042BA46 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0D0187762C165E7E0042BA46 /* CharacterDetailPushCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPushCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +74,8 @@
 		0D01872C2C0422420042BA46 = {
 			isa = PBXGroup;
 			children = (
-				0D0187662C163BE90042BA46 /* Roboto-Bold.ttf */,
 				0D0187372C0422420042BA46 /* MarvelAppMVC */,
+				0D0187662C163BE90042BA46 /* Roboto-Bold.ttf */,
 				0D0187362C0422420042BA46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +91,7 @@
 		0D0187372C0422420042BA46 /* MarvelAppMVC */ = {
 			isa = PBXGroup;
 			children = (
+				0D0187712C165C080042BA46 /* Coordinators */,
 				0D0187692C1644230042BA46 /* DetailCharacters */,
 				0D0187682C1642000042BA46 /* ListCharacters */,
 				0D01873A2C0422420042BA46 /* SceneDelegate.swift */,
@@ -150,6 +159,7 @@
 		0D01876A2C1644340042BA46 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0D01876F2C1647460042BA46 /* CharacterDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +177,16 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0D0187712C165C080042BA46 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				0D0187722C165C2B0042BA46 /* Coordinator.swift */,
+				0D0187742C165CB20042BA46 /* MainCoordinator.swift */,
+				0D0187762C165E7E0042BA46 /* CharacterDetailPushCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,17 +270,21 @@
 			files = (
 				0D01875E2C0D3CF50042BA46 /* CharacterListCellView.swift in Sources */,
 				0D01873D2C0422420042BA46 /* CharacterListViewController.swift in Sources */,
+				0D0187732C165C2B0042BA46 /* Coordinator.swift in Sources */,
 				0D0187652C153E420042BA46 /* CharacterListTableViewDelegate.swift in Sources */,
 				0D01876E2C1644A90042BA46 /* CharacterDetailView.swift in Sources */,
 				0D0187392C0422420042BA46 /* AppDelegate.swift in Sources */,
 				0D01873B2C0422420042BA46 /* SceneDelegate.swift in Sources */,
 				0D01875C2C0D36FF0042BA46 /* CharacterListView.swift in Sources */,
 				0D0187542C0580360042BA46 /* MarvelResponse.swift in Sources */,
+				0D0187752C165CB20042BA46 /* MainCoordinator.swift in Sources */,
 				0D0187602C0EAE590042BA46 /* CharacterListTableViewDataSource.swift in Sources */,
 				0D0187562C05804B0042BA46 /* MarvelData.swift in Sources */,
 				0D0187582C05805D0042BA46 /* CharacterModel.swift in Sources */,
+				0D0187702C1647460042BA46 /* CharacterDetailViewController.swift in Sources */,
 				0D0187502C04282E0042BA46 /* APIClient.swift in Sources */,
 				0D01875A2C0580690042BA46 /* ImageModel.swift in Sources */,
+				0D0187772C165E7E0042BA46 /* CharacterDetailPushCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
