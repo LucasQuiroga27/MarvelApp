@@ -21,7 +21,19 @@ class CharacterDetailView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        if let customFont = UIFont(name: "Roboto-Bold", size: 22) {
+            label.font = customFont
+        } else {
+            label.font = UIFont.boldSystemFont(ofSize: 22)
+        }
+        return label
+    }()
+    
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Descripción:"
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         return label
     }()
     
@@ -29,7 +41,7 @@ class CharacterDetailView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.italicSystemFont(ofSize: 12)
+        label.font = UIFont.italicSystemFont(ofSize: 16)
         label.textColor = UIColor.systemGray
         return label
     }()
@@ -49,22 +61,28 @@ class CharacterDetailView: UIView {
         
         addSubview(characterImageView)
         addSubview(characterNameView)
+        addSubview(descriptionLabel)
         addSubview(characterDescriptionView)
         
         NSLayoutConstraint.activate([
-            characterImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            characterImageView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor, constant: 12),
-            characterImageView.heightAnchor.constraint(equalToConstant: 200),
-            characterImageView.widthAnchor.constraint(equalToConstant: 200),
             
-            characterNameView.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 10),
-            characterNameView.topAnchor.constraint(equalTo: characterImageView.topAnchor),
-            characterNameView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            characterNameView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            characterNameView.topAnchor.constraint(equalTo: layoutMarginsGuide.topAnchor, constant: 12),
+            characterNameView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 12),
+            characterNameView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -12),
             
-            characterDescriptionView.leadingAnchor.constraint(equalTo: characterNameView.leadingAnchor,constant: 20),
-            characterDescriptionView.topAnchor.constraint(equalTo: characterNameView.bottomAnchor),
-            characterDescriptionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-
+            characterImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            characterImageView.topAnchor.constraint(equalTo: characterNameView.bottomAnchor, constant: 20),
+            characterImageView.heightAnchor.constraint(equalToConstant: 250),
+            characterImageView.widthAnchor.constraint(equalToConstant: 250),
+            
+            descriptionLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 20),
+            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
+                        
+            characterDescriptionView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 8),
+            characterDescriptionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
+            characterDescriptionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12)
             
         ])
         
@@ -72,7 +90,9 @@ class CharacterDetailView: UIView {
     
     func configure(_ model: CharacterModel){
         self.characterNameView.text = model.name
-        self.characterDescriptionView.text = model.description
+        //self.characterDescriptionView.text = model.description
+        self.characterDescriptionView.text = (model.description?.isEmpty ?? true) ? "No data to display" : model.description
+
         
         if let imagePath = model.image?.path, let imageExtension = model.image?.fileExtension {
             let completePath = "\(imagePath).\(imageExtension)"
