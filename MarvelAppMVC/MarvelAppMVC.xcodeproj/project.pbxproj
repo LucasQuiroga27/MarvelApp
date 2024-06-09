@@ -25,6 +25,7 @@
 		0D0187632C1539770042BA46 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0D0187622C1539770042BA46 /* Kingfisher */; };
 		0D0187652C153E420042BA46 /* CharacterListTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0187642C153E420042BA46 /* CharacterListTableViewDelegate.swift */; };
 		0D0187672C163BE90042BA46 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D0187662C163BE90042BA46 /* Roboto-Bold.ttf */; };
+		0D01876E2C1644A90042BA46 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01876D2C1644A90042BA46 /* CharacterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		0D01875F2C0EAE590042BA46 /* CharacterListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListTableViewDataSource.swift; sourceTree = "<group>"; };
 		0D0187642C153E420042BA46 /* CharacterListTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListTableViewDelegate.swift; sourceTree = "<group>"; };
 		0D0187662C163BE90042BA46 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../Downloads/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		0D01876D2C1644A90042BA46 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +83,8 @@
 		0D0187372C0422420042BA46 /* MarvelAppMVC */ = {
 			isa = PBXGroup;
 			children = (
-				0D01874C2C0427D70042BA46 /* Model */,
-				0D01874D2C0427E30042BA46 /* View */,
-				0D01874E2C0427ED0042BA46 /* Controller */,
+				0D0187692C1644230042BA46 /* DetailCharacters */,
+				0D0187682C1642000042BA46 /* ListCharacters */,
 				0D01873A2C0422420042BA46 /* SceneDelegate.swift */,
 				0D0187382C0422420042BA46 /* AppDelegate.swift */,
 				0D0187412C0422430042BA46 /* Assets.xcassets */,
@@ -124,6 +125,48 @@
 				0D0187642C153E420042BA46 /* CharacterListTableViewDelegate.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D0187682C1642000042BA46 /* ListCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				0D01874C2C0427D70042BA46 /* Model */,
+				0D01874D2C0427E30042BA46 /* View */,
+				0D01874E2C0427ED0042BA46 /* Controller */,
+			);
+			path = ListCharacters;
+			sourceTree = "<group>";
+		};
+		0D0187692C1644230042BA46 /* DetailCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				0D01876C2C1644490042BA46 /* Model */,
+				0D01876B2C16443A0042BA46 /* View */,
+				0D01876A2C1644340042BA46 /* Controller */,
+			);
+			path = DetailCharacters;
+			sourceTree = "<group>";
+		};
+		0D01876A2C1644340042BA46 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D01876B2C16443A0042BA46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D01876D2C1644A90042BA46 /* CharacterDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D01876C2C1644490042BA46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +251,7 @@
 				0D01875E2C0D3CF50042BA46 /* CharacterListCellView.swift in Sources */,
 				0D01873D2C0422420042BA46 /* CharacterListViewController.swift in Sources */,
 				0D0187652C153E420042BA46 /* CharacterListTableViewDelegate.swift in Sources */,
+				0D01876E2C1644A90042BA46 /* CharacterDetailView.swift in Sources */,
 				0D0187392C0422420042BA46 /* AppDelegate.swift in Sources */,
 				0D01873B2C0422420042BA46 /* SceneDelegate.swift in Sources */,
 				0D01875C2C0D36FF0042BA46 /* CharacterListView.swift in Sources */,
