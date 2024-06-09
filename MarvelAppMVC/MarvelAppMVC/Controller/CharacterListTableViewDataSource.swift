@@ -34,8 +34,7 @@ final class CharacterListTableViewDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterListCellView", for: indexPath) as! CharacterListCellView
         
         let character = characters[indexPath.row]
-        
-        cell.backgroundColor = .blue
+        cell.configure(character)
         
         return cell
     }

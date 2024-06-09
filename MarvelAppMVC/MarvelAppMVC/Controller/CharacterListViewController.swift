@@ -13,12 +13,16 @@ class CharacterListViewController: UIViewController {
     let apiClient = ListCharactersAPIClient()
     
     private var tableViewDataSource: CharacterListTableViewDataSource?
+    private var tableViewDelegate: CharacterListTableViewDelegate?
     
     override func loadView() {
         view = CharacterListView()
+        tableViewDelegate = CharacterListTableViewDelegate()
         
         tableViewDataSource = CharacterListTableViewDataSource(tableView: mainView.charactersTableView)
         mainView.charactersTableView.dataSource = tableViewDataSource
+        mainView.charactersTableView.delegate = tableViewDelegate
+        
     }
 
     override func viewDidLoad() {
