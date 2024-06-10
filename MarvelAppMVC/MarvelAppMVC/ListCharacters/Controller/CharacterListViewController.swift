@@ -44,13 +44,17 @@ class CharacterListViewController: UIViewController {
             
         }
         
+        loadCharacters()
+    }
+    
+    private func loadCharacters() {
         Task {
             if let marvelResponse = await apiClient.getCharacters(character: nil),
-               let characters = marvelResponse.data?.results {
-                        tableViewDataSource?.set(characters: characters)
-                    } else {
-                        print("No se pudieron cargar los personajes")
-                    }
+                let characters = marvelResponse.data?.results {
+                tableViewDataSource?.set(characters: characters)
+            } else {
+                print("No se pudieron cargar los personajes")
+            }
         }
     }
     
@@ -83,18 +87,20 @@ extension CharacterListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text else { return }
         
-        if searchText.isEmpty {
-            tableViewDataSource?.resetCharacters()
-        } else {
-            Task {
-                if let marvelResponse = await apiClient.getCharacters(character: searchText),
-                   let characters = marvelResponse.data?.results {
-                    tableViewDataSource?.set(characters: characters)
-                } else {
-                    print("No se pudieron cargar los personajes")
-                }
+        Task {
+            if let marvelResponse = await apiClient.getCharacters(character: searchText),
+                let characters = marvelResponse.data?.results {
+                tableViewDataSource?.set(characters: characters)
+            } else {
+                print("No se pudieron cargar los personajes")
             }
         }
+    }
+}
+
+extension CharacterListViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        loadCharacters()
     }
 }
 

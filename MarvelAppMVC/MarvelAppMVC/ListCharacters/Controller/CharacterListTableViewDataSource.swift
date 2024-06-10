@@ -54,8 +54,4 @@ final class CharacterListTableViewDataSource: NSObject, UITableViewDataSource {
         self.filteredCharacters = characters.compactMap { $0 }
     }
     
-    func resetCharacters() {
-        characters = filteredCharacters
-    }
-    
 }
