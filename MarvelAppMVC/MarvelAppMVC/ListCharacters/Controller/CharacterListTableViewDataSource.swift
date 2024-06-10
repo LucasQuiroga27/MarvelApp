@@ -20,9 +20,12 @@ final class CharacterListTableViewDataSource: NSObject, UITableViewDataSource {
         }
     }
     
+    private(set) var filteredCharacters: [CharacterModel] = []
+    
     init(tableView: UITableView, characters: [CharacterModel] = []) {
         self.tableView = tableView
         self.characters = characters
+        self.filteredCharacters = characters
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +47,15 @@ final class CharacterListTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func set(characters: [CharacterModel?]) {
-        self.characters = characters.compactMap{ $0 }
+        self.characters = characters.compactMap { $0 }
+    }
+    
+    func setFiltered(characters: [CharacterModel?]) {
+        self.filteredCharacters = characters.compactMap { $0 }
+    }
+    
+    func resetCharacters() {
+        characters = filteredCharacters
     }
     
 }

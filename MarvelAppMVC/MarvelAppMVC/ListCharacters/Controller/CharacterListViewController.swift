@@ -80,9 +80,21 @@ class CharacterListViewController: UIViewController {
 }
 
 extension CharacterListViewController: UISearchResultsUpdating {
-    
-    func updateSearchResults(for searchController: UISearchController){
-        print("Debug print", searchController.searchBar.text!)
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
+        
+        if searchText.isEmpty {
+            tableViewDataSource?.resetCharacters()
+        } else {
+            Task {
+                if let marvelResponse = await apiClient.getCharacters(character: searchText),
+                   let characters = marvelResponse.data?.results {
+                    tableViewDataSource?.set(characters: characters)
+                } else {
+                    print("No se pudieron cargar los personajes")
+                }
+            }
+        }
     }
 }
 
