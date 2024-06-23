@@ -36,10 +36,15 @@ La aplicación está diseñada siguiendo el patrón arquitectónico MVC (Model-V
 ## Screenshots
 
 ![App Screenshot](https://i.postimg.cc/j2hyDQPp/1.png)
+
 ![App Screenshot](https://i.postimg.cc/m2bQ0JGB/2.png)
+
 ![App Screenshot](https://i.postimg.cc/XNKf13ms/3.png)
+
 ![App Screenshot](https://i.postimg.cc/BQMxspqD/4.png)
+
 ![App Screenshot](https://i.postimg.cc/2Syn5W6t/5.png)
+
 ![App Screenshot](https://i.postimg.cc/y8Gc3N38/6.png)
 
 
