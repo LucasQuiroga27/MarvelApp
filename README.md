@@ -35,17 +35,22 @@ La aplicación está diseñada siguiendo el patrón arquitectónico MVC (Model-V
 
 ## Screenshots
 
-- LauchScreen:
-![App Screenshot](https://i.postimg.cc/j2hyDQPp/1.png)
-- Pantalla Principal:
+    1.LauchScreen:
+![App Screenshot](https://i.postimg.cc/gJs0RMtH/1.png)
+
+    2.Pantalla Principal:
 ![App Screenshot](https://i.postimg.cc/m2bQ0JGB/2.png)
-- Detalle del Personaje:
+
+    3.Detalle del Personaje:
 ![App Screenshot](https://i.postimg.cc/XNKf13ms/3.png)
-- Buscador de Personajes:
+
+    4.Buscador de Personajes:
 ![App Screenshot](https://i.postimg.cc/BQMxspqD/4.png)
-- Detalle:
+
+    5.Detalle:
 ![App Screenshot](https://i.postimg.cc/2Syn5W6t/5.png)
-- Icono y nombre de la App:
+
+    6.Icono y nombre de la App:
 ![App Screenshot](https://i.postimg.cc/y8Gc3N38/6.png)
 
 
