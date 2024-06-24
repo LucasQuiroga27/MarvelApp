@@ -16,6 +16,7 @@ Es una aplicación móvil para iOS que muestra un listado de personajes de Marve
 - Kingfisher: Librería para la carga y gestión de imágenes.
 - URLSession: Framework para la gestión de peticiones HTTP.
 - Coordinators: Patrón de diseño para la navegación.
+- CryptoKit: Framework para realizar operaciones criptográficas necesarias para la autenticación con la API de Marvel.
 - API de Marvel: Fuente de datos de los personajes.
 
 ## Arquitectura
